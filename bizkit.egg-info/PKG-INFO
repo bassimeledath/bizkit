@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: bizkit
+Version: 0.0.3
+Summary: A package that streamlines business data analytics
+Home-page: https://github.com/pypa/bizkit
+Author: Bassim Eledath, Lynn He, Christine Zhu, Amanda Ma
+Author-email: bassimfaizal@gmail.com
+License: UNKNOWN
+Description: # bizkit
+        Streamlining business analytics data mining tasks
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
