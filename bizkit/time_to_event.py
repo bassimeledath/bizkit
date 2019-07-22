@@ -7,10 +7,7 @@ from bokeh.models import ColumnDataSource, HoverTool,Band
 from bokeh.layouts import row, column, gridplot
 from bokeh.models.widgets import Tabs, Panel
 from bokeh import palettes
-import itertools
-from itertools import cycle
 import pandas as pd
-import numpy as np
 
 # helper functions   
 def make_step(x,y):
