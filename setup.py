@@ -20,8 +20,10 @@ setuptools.setup(
     ],
     install_requires=[
         "pandas",
+	"numpy",
         "lifelines",
-        "bokeh"
+        "bokeh",
+	"sklearn"
 
     ]
 
