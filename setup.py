@@ -23,7 +23,9 @@ setuptools.setup(
 	"numpy",
         "lifelines",
         "bokeh",
-	"sklearn"
+	"sklearn",
+	"mlxtend",
+	"d3fdgraph"
 
     ]
 
