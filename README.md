@@ -1,5 +1,5 @@
 
-Logo to be added
+# <img alt="PyBiz" src="logo.png" height="100" width="200">
 
 # bizkit
 
