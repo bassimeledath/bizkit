@@ -1,5 +1,5 @@
 
-# <img alt="bizkit" src="logo.jpg" height="150" width="150">
+# <img alt="bizkit" src="logo.jpg" height="300" width="300">
 
 
 # bizkit
