@@ -1,5 +1,6 @@
 
-# <img alt="PyBiz" src="logo.png" height="100" width="200">
+# <img alt="bizkit" src="logo.jpg" height="150" width="150">
+
 
 # bizkit
 
