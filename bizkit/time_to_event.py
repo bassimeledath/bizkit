@@ -132,7 +132,7 @@ class time_to_event(object):
             count = 0
             for val_1,val_2 in zip(list_segment_vals_x,list_segment_vals_y):
                 fig.line(x=val_1, y=val_2,
-                     line_width=2,legend=[str(x) for x in dataframe['segments'].unique()][count],
+                     line_width=2,legend=[str(x) for x in dataframe[group].unique()][count],
                      color=palettes.Category20_5[count])
                 count+=1
 
@@ -161,10 +161,10 @@ class time_to_event(object):
         """
         df_pairwise = pd.DataFrame()
         if event_observed is not None:
-            df_pairwise =pairwise_logrank_test(dataframe['durations'],dataframe['segments'],
-                                           dataframe['event_observed']).summary[['p']]
+            df_pairwise =pairwise_logrank_test(dataframe[durations],dataframe[group],
+                                           dataframe[event_observed]).summary[['p']]
         else:
-            df_pairwise =pairwise_logrank_test(dataframe['durations'],dataframe['segments']).summary[['p']]
+            df_pairwise =pairwise_logrank_test(dataframe[durations],dataframe[group]).summary[['p']]
         df_pairwise.columns = ['p-value']
         df_pairwise = df_pairwise.style.applymap(color_negative_red)
         
