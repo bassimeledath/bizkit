@@ -140,7 +140,7 @@ class anomaly(object):
             x_axis_label='Timeline',
             x_axis_type='datetime',
             y_axis_label='Value',
-            title="Time Series with Red Dots of Potential Anomalies")
+            title="Time Series With Red Dots Representing Anomalies")
 
         fig.scatter("timestamp", "value", color="#FF0000", source=a)
         fig.line("timestamp", "value", color="#000080", source=df)
