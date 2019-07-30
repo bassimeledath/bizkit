@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="bizkit",
-    version="0.0.3",
+    version="0.0.4",
     author="Bassim Eledath, Lynn He, Christine Zhu, Amanda Ma",
     author_email="bassimfaizal@gmail.com",
     description="A package that streamlines business data analytics",
@@ -20,12 +20,12 @@ setuptools.setup(
     ],
     install_requires=[
         "pandas",
-	"numpy",
+	    "numpy",
         "lifelines",
         "bokeh",
-	"sklearn",
-	"mlxtend",
-	"d3fdgraph"
+	    "sklearn",
+	    "mlxtend",
+	    "d3fdgraph"
 
     ]
 
