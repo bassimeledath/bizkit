@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="bizkit",
-    version="0.0.5",
+    version="0.0.1",
     author="Bassim Eledath, Lynn He, Christine Zhu, Amanda Ma",
     author_email="bassimfaizal@gmail.com",
     description="A package that streamlines business data analytics",
