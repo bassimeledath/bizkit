@@ -6,8 +6,9 @@ from bokeh.plotting import figure, show
 from bokeh.models import ColumnDataSource, HoverTool,Band
 from bokeh.layouts import row, column, gridplot
 from bokeh.models.widgets import Tabs, Panel
-from bokeh import palettes
+import numpy as np
 import pandas as pd
+import random
 
 # helper functions   
 def make_step(x,y):
@@ -32,6 +33,26 @@ def make_step(x,y):
 def color_negative_red(val):
     color = 'red' if val > 0.05 else 'green'
     return 'color: %s' % color
+
+def color_generator(n):
+    np.random.seed(42)
+    colors = ['aliceblue', 'aqua', 'aquamarine', 'azure', 'beige', 'bisque', 'black', 'blanchedalmond', 'blue', 'blueviolet'
+    , 'brown', 'burlywood', 'cadetblue', 'chartreuse', 'chocolate', 'coral', 'cornflowerblue', 'cornsilk', 'crimson', 'cyan'
+    , 'darkblue', 'darkcyan', 'darkgoldenrod', 'darkgray', 'darkgreen', 'darkgrey', 'darkkhaki', 'darkmagenta', 'darkolivegreen',
+     'darkorange', 'darkorchid', 'darkred', 'darksalmon', 'darkseagreen', 'darkslateblue', 'darkslategray', 'darkslategrey', 
+     'darkturquoise', 'darkviolet', 'deeppink', 'deepskyblue', 'dimgray', 'dimgrey', 'dodgerblue', 'firebrick', 
+     'forestgreen', 'fuchsia', 'gainsboro', 'gold', 'goldenrod', 'gray', 'green', 'greenyellow', 'grey', 'honeydew', 
+     'hotpink', 'indianred', 'indigo', 'ivory', 'khaki', 'lavender', 'lavenderblush', 'lawngreen', 'lemonchiffon', 'lightblue', 
+     'lightcoral', 'lightcyan', 'lightgoldenrodyellow', 'lightgray', 'lightgreen', 'lightgrey', 'lightpink', 'lightsalmon', 
+     'lightseagreen', 'lightskyblue', 'lightslategray', 'lightslategrey', 'lightsteelblue', 'lightyellow', 'lime', 'limegreen', 
+     'linen', 'magenta', 'maroon', 'mediumaquamarine', 'mediumblue', 'mediumorchid', 'mediumpurple', 'mediumseagreen', 
+     'mediumslateblue', 'mediumspringgreen', 'mediumturquoise', 'mediumvioletred', 'midnightblue', 'mintcream', 'mistyrose', 
+     'moccasin', 'navy', 'oldlace', 'olive', 'olivedrab', 'orange', 'orangered', 'orchid', 'palegoldenrod', 
+     'palegreen', 'paleturquoise', 'palevioletred', 'papayawhip', 'peachpuff', 'peru', 'pink', 'plum', 'powderblue', 'purple', 
+     'red', 'rosybrown', 'royalblue', 'saddlebrown', 'salmon', 'sandybrown', 'seagreen', 'seashell', 'sienna', 'silver', 'skyblue', 
+     'slateblue', 'slategray', 'slategrey', 'snow', 'springgreen', 'steelblue', 'tan', 'teal', 'thistle', 'tomato', 'turquoise', 
+     'violet', 'wheat', 'yellow', 'yellowgreen']
+    return np.random.choice(colors,size=n)
 
 class time_to_event(object):
     """
@@ -83,7 +104,7 @@ class time_to_event(object):
             fig = figure(plot_height=400,
             plot_width=600,
             x_axis_label='Timeline',
-            y_axis_label='Some metric',
+            y_axis_label='Survival Probability',
             title='Graph',
             )
             fig.multi_line(xs=[df_for_plot['x']], ys=[df_for_plot['y']],
@@ -126,17 +147,19 @@ class time_to_event(object):
             fig = figure(plot_height=400,
                          plot_width=600,
                          x_axis_label='Timeline',
-                         y_axis_label='Some metric',
+                         y_axis_label='Survival Probability',
                          title='Graph',
                         )
             count = 0
+            colors = color_generator(n=len(dataframe[group].unique()))
+
             for val_1,val_2 in zip(list_segment_vals_x,list_segment_vals_y):
                 fig.line(x=val_1, y=val_2,
                      line_width=2,legend=[str(x) for x in dataframe[group].unique()][count],
-                     color=palettes.Category20_5[count])
+                     color=colors[count])
                 count+=1
 
-            #add hovering tooltips
+            # add hovering tooltips
             tooltips = [
                         ('Time','$x'),
                         ('Survival Probability', '$y')
