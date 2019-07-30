@@ -8,7 +8,6 @@ from bokeh.layouts import row, column, gridplot
 from bokeh.models.widgets import Tabs, Panel
 import numpy as np
 import pandas as pd
-import random
 
 # helper functions   
 def make_step(x,y):
