@@ -4,7 +4,7 @@
 
 # bizkit
 
-bizkit is a Python package to help streamlining business analytics data mining tasks. This package provides methods for market basket analysis, anomaly detection, customer survival analysis, customer clustering, and uplifting analysis. Implemented algorithms include mlxtend.apriori, sklearn.IsolationForest, lifelines.KaplanMeierFitter, [], and []. bizkit focuses on ease of use by providing a well-documented and consistent interface. The results are visualized via bokeh library, d3fgraph library, and [].
+bizkit is a Python package to help streamlining business analytics data mining tasks. This package provides methods for market basket analysis, anomaly detection, time-to-event analysis, customer clustering, and uplifting analysis. Implemented algorithms include mlxtend.apriori, sklearn.IsolationForest, lifelines.KaplanMeierFitter, [], and []. bizkit focuses on ease of use by providing a well-documented and consistent interface. The results are visualized via bokeh library, d3fgraph library, and [].
 
 
 # Reference
