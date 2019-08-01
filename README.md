@@ -29,7 +29,7 @@ Customer segmentation:
 
 
 Uplift Modelling (in progress):
-- Simple Machine Learning Techniques To Improve Your Marketing Strategy: Demystifying Uplift Modelshttps://medium.com/datadriveninvestor/simple-machine-learning-techniques-to-improve-your-marketing-strategy-demystifying-uplift-models-dc4fb3f927a2
+- Simple Machine Learning Techniques To Improve Your Marketing Strategy: Demystifying Uplift Models https://medium.com/datadriveninvestor/simple-machine-learning-techniques-to-improve-your-marketing-strategy-demystifying-uplift-models-dc4fb3f927a2
 
 
 # Author
