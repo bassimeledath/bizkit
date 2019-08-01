@@ -4,7 +4,7 @@
 
 # bizkit
 
-bizkit is a Python package to help streamlining business analytics data mining tasks. This package provides methods for market basket analysis, anomaly detection, customer survival analysis, customer clustering, and uplifting analysis. Implemented algorithms include mlxtend.apriori, sklearn.IsolationForest, lifelines.KaplanMeierFitter, [], and []. bizkit focuses on ease of use by providing a well-documented and consistent interface. The results are visualized via bokeh library, d3fgraph library, and [].
+bizkit is a Python package to help streamlining business analytics data mining tasks. This package provides models for market basket analysis, anomaly detection, time-to-event modelling, customer segmentation, and uplift modelling (in progress). Implemented algorithms include mlxtend.apriori, sklearn.IsolationForest, lifelines.KaplanMeierFitter, k-means, and catboost. bizkit focuses on ease of use by providing a well-documented and consistent interface. The results are presented in the interactive visualization via libraries of bokeh, d3fgraph, and plotly.
 
 
 # Reference
@@ -20,15 +20,15 @@ Anomaly detection:
 - Sklearn IsolationForest: https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
 
 
-Time-to-event analysis:
+Time-to-event modelling:
 - Lifelines https://lifelines.readthedocs.io/en/latest/
 
 
-Customer clustering:
+Customer segmentation:
 - Understanding K-means Clustering in Machine Learning https://towardsdatascience.com/understanding-k-means-clustering-in-machine-learning-6a6e67336aa1
 
 
-Uplift Modeling:
+Uplift Modelling (in progress):
 - Simple Machine Learning Techniques To Improve Your Marketing Strategy: Demystifying Uplift Modelshttps://medium.com/datadriveninvestor/simple-machine-learning-techniques-to-improve-your-marketing-strategy-demystifying-uplift-models-dc4fb3f927a2
 
 
